@@ -6,21 +6,19 @@
  <div class="row">
   <div class="col-sm-3">
     <div class="list-group">
-         <a href="{% url 'mobile'  %}" class="list-group-item list-group-item-action"
+         <a href="{% url 'mobiledatasort' data 'newarrivals'  %}" class="list-group-item list-group-item-action"
          aria-current="true">New Arrivals</a>
-         <a href="{% url 'mobile' %}" class="list-group-item list-group-item-action"
+         <a href="{% url 'mobiledatasort' data 'lowtohigh' %}" class="list-group-item list-group-item-action"
          aria-current="true">Price Low to High</a>
-         <a href="{% url 'mobile' %}" class="list-group-item list-group-item-action"
+         <a href="{% url 'mobiledatasort' data 'hightolow' %}" class="list-group-item list-group-item-action"
          aria-current="true">Price High to Low</a>
-         <a href="{% url 'mobiledata' 'Apple' %}" class="list-group-item list-group-item-action"
+         <a href="{% url 'mobiledatasort' data 'above50000' %}" class="list-group-item list-group-item-action"
          aria-current="true">Above 50000</a>
-         <a href="{% url 'mobile' %}" class="list-group-item list-group-item-action"
+         <a href="{% url 'mobiledatasort' data 'below50000' %}" class="list-group-item list-group-item-action"
          aria-current="true">Below 50000</a>
-         <a href="{% url 'mobile' %}" class="list-group-item list-group-item-action"
+         <a href="{% url 'mobiledatasort' data 'below30000' %}" class="list-group-item list-group-item-action"
          aria-current="true">Below 30000</a>
-         <a href="{% url 'mobile' %}" class="list-group-item list-group-item-action"
-         aria-current="true">Below 20000</a>
-         <a href="{% url 'mobile' %}" class="list-group-item list-group-item-action"
+         <a href="{% url 'mobiledatasort' data 'below15000' %}" class="list-group-item list-group-item-action"
          aria-current="true">Below 15000</a>
     </div>
   </div>
