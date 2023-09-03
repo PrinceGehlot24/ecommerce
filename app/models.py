@@ -11,10 +11,10 @@ STATE_CHOICES = (
 )
 
 CATEGORY_CHOICES = (
-    ('M', 'Mobile'),
-    ('L', 'Laptop'),
-    ('TW', 'Top Wear'),
-    ('BW', 'Bottom Wear'),
+    ('M', 'Mobiles'),
+    ('W', 'Watches'),
+    ('T', 'Tablets'),
+    ('B', 'Buds'),
 )
 
 STATUS_CHOICES = (
