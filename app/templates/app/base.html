@@ -22,7 +22,7 @@
     <title>Digi World | {% block title %} {% endblock title %} </title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
      <div class="container">
        <a class="navbar-brand" href="/">Digi World</a>
        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,27 +30,58 @@
        </button>
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           <li class="nav-item">
+           <!-- <li class="nav-item">
              <a class="nav-link active" aria-current="page" href="/">Home</a>
-           </li>
+           </li> -->
            <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle text-white" href="#" id="electronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Electronics
+               Mobiles
              </a>
              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
-               <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
-               <li><a class="dropdown-item" href="#">Laptop</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">All Brands</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Apple</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Oneplus</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Samsung</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Mi</a></li>
              </ul>
            </li>
            <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle text-white" href="#" id="fashionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Fashion
-             </a>
-             <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
-               <li><a class="dropdown-item" href="#">Top Wear</a></li>
-               <li><a class="dropdown-item" href="#">Bottom Wear</a></li>
-             </ul>
-           </li>
+            <a class="nav-link dropdown-toggle text-white" href="#" id="electronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Laptops
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+             <li><a class="dropdown-item" href="{% url 'mobile' %}">All Brands</a></li>
+             <li><a class="dropdown-item" href="{% url 'mobile' %}">Apple</a></li>
+             <li><a class="dropdown-item" href="{% url 'mobile' %}">Hp</a></li>
+             <li><a class="dropdown-item" href="{% url 'mobile' %}">Dell</a></li>
+             <li><a class="dropdown-item" href="{% url 'mobile' %}">Lenovo</a></li>
+             <li><a class="dropdown-item" href="{% url 'mobile' %}">MSI</a></li>
+             <li><a class="dropdown-item" href="{% url 'mobile' %}">Acer</a></li>
+            </ul>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="electronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tablets
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">All Brands</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Apple</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Oneplus</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Samsung</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Mi</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="electronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Accessories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Watches</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Buds</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Connectors</a></li>
+              <li><a class="dropdown-item" href="{% url 'mobile' %}">Cases</a></li>
+            </ul>
+          </li>
          </ul>
          <form class="d-flex">
            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -60,7 +91,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
            <li class="nav-item dropdown mx-2">
               <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Sonam
+                Prince
               </a>
               <ul class="dropdown-menu" aria-labelledby="profileDropdown">
                 <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
@@ -89,7 +120,7 @@
 
     <!-- Start Footer -->
     <footer class="container-fluid bg-dark text-center p-2 mt-5">
-        <small class="text-white">Copyright &copy; 2021 || Designed By GeekyShows || </small>
+        <small class="text-white">Copyright &copy; 2023 &nbsp; | &nbsp;  Designed By Prince Gehlot &nbsp;  | &nbsp;   </small>
         <img src="{% static 'app/images/payment.png' %}" alt="" srcset="" class="img-fluid" height="2px">
     </footer> <!-- End Footer -->
 
