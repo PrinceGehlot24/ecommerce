@@ -3,6 +3,7 @@ from django.db.models import Q
 from django.views import View
 from .models import Customer, Product, OrderPlaced, Cart
 from .forms import CustomerRegistrationForm
+from django.contrib import messages
 
 class ProductView(View):
     def get(self, request):
@@ -31,9 +32,6 @@ def address(request):
 
 def orders(request):
  return render(request, 'app/orders.html')
-
-def change_password(request):
- return render(request, 'app/changepassword.html')
 
 def mobile(request, data=None, sort=None):
     filter_dict = {
@@ -71,6 +69,7 @@ class CustomerRegistrationView(View):
   def post(self, request):
     form = CustomerRegistrationForm(request.POST)
     if form.is_valid():
+        messages.success(request, 'Congratulations !! Registered Successfully .')
         form.save()
     return render(request, 'app/customerregistration.html', {'form': form})
         
