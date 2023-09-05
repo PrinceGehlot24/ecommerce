@@ -4,7 +4,10 @@
 {% block main-content %}
 <div class="container my-5">
  <div class="row">
-  <div class="col-sm-3">
+        <img src="{% static 'app/images/banner/mobilehead.jpg' %}" class="d-block w-100" alt="...">
+ </div>
+ <div class="row mt-4">
+  <div class="col-sm-3 mt-4">
     <div class="list-group">
          <a href="{% url 'mobiledatasort' data 'newarrivals'  %}" class="list-group-item list-group-item-action"
          aria-current="true">New Arrivals</a>
@@ -22,7 +25,7 @@
          aria-current="true">Below 15000</a>
     </div>
   </div>
-  <div class="col-sm-8 offset-sm-1">
+  <div class="col-sm-8 offset-sm-1 mt-4">
     <div class="row">
         {% for product in mobiles%}
         <div class="col-sm-4 text-center mb-4">
