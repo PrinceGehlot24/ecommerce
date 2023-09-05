@@ -24,18 +24,23 @@ urlpatterns = [
     path('password-reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='app/password_reset_done.html'), name='password_reset_done'),
     path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='app/password_reset_confirm.html', form_class=MySetPasswordForm), name='password_reset_confirm'),
     path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name='app/password_reset_complete.html'), name='password_reset_complete'),
+    
     path('mobile/', views.mobile, name='mobile'),
     path('mobile/<slug:data>/', views.mobile, name='mobiledata'),
     path('mobile/<slug:data>/<slug:sort>', views.mobile, name='mobiledatasort'),
-    path('tablet/', views.mobile, name='mobile'),
-    path('tablet/<slug:data>/', views.mobile, name='mobiledata'),
-    path('tablet/<slug:data>/<slug:sort>', views.mobile, name='mobiledatasort'),
-    path('watch/', views.mobile, name='mobile'),
-    path('watch/<slug:data>/', views.mobile, name='mobiledata'),
-    path('watch/<slug:data>/<slug:sort>', views.mobile, name='mobiledatasort'),
-    path('bud/', views.mobile, name='mobile'),
-    path('bud/<slug:data>/', views.mobile, name='mobiledata'),
-    path('bud/<slug:data>/<slug:sort>', views.mobile, name='mobiledatasort'),
+    
+    path('tablet/', views.tablet, name='tablet'),
+    path('tablet/<slug:data>/', views.tablet, name='tabletdata'),
+    path('tablet/<slug:data>/<slug:sort>', views.tablet, name='tabletdatasort'),
+    
+    path('watch/', views.watch, name='watch'),
+    path('watch/<slug:data>/', views.watch, name='mwatchdata'),
+    path('watch/<slug:data>/<slug:sort>', views.watch, name='watchdatasort'),
+    
+    path('bud/', views.bud, name='bud'),
+    path('bud/<slug:data>/', views.bud, name='buddata'),
+    path('bud/<slug:data>/<slug:sort>', views.bud, name='buddatasort'),
+    
     path('accounts/login/', auth_views.LoginView.as_view(template_name='app/login.html', authentication_form=LoginForm), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
     path('registration/', views.CustomerRegistrationView.as_view(), name='customerregistration'),

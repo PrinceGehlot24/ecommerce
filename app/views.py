@@ -130,6 +130,68 @@ def mobile(request, data=None, sort=None):
     
     return render(request, 'app/mobile.html', {'mobiles': mobiles, 'data': data})
 
+def tablet(request, data=None, sort=None):
+    filter_dict = {
+        None: Q(category='T'),
+        'newarrivals': Q(),
+        'lowtohigh': Q(),
+        'hightolow': Q(),
+        'above50000': Q(discounted_price__gt=50000),
+        'below50000': Q(discounted_price__lt=50000),
+        'below30000': Q(discounted_price__lt=30000),
+        'below15000': Q(discounted_price__lt=15000),
+    }
+    
+    brand_filter = Q()
+    if data in ['Apple', 'Oneplus', 'Samsung', 'Mi']:
+        brand_filter = Q(brand=data)
+    
+    filter_combination = filter_dict.get(sort, Q())
+    tablets = Product.objects.filter(Q(category='T') & brand_filter & filter_combination)
+    
+    return render(request, 'app/tablet.html', {'tablets': tablets, 'data': data})
+
+def watch(request, data=None, sort=None):
+    filter_dict = {
+        None: Q(category='W'),
+        'newarrivals': Q(),
+        'lowtohigh': Q(),
+        'hightolow': Q(),
+        'above50000': Q(discounted_price__gt=50000),
+        'below50000': Q(discounted_price__lt=50000),
+        'below30000': Q(discounted_price__lt=30000),
+        'below15000': Q(discounted_price__lt=15000),
+    }
+    
+    brand_filter = Q()
+    if data in ['Apple', 'Oneplus', 'Samsung', 'Mi']:
+        brand_filter = Q(brand=data)
+    
+    filter_combination = filter_dict.get(sort, Q())
+    watches = Product.objects.filter(Q(category='W') & brand_filter & filter_combination)
+    
+    return render(request, 'app/watch.html', {'watches': watches, 'data': data})
+
+def bud(request, data=None, sort=None):
+    filter_dict = {
+        None: Q(category='B'),
+        'newarrivals': Q(),
+        'lowtohigh': Q(),
+        'hightolow': Q(),
+        'above50000': Q(discounted_price__gt=50000),
+        'below50000': Q(discounted_price__lt=50000),
+        'below30000': Q(discounted_price__lt=30000),
+        'below15000': Q(discounted_price__lt=15000),
+    }
+    
+    brand_filter = Q()
+    if data in ['Apple', 'Oneplus', 'Samsung', 'Mi']:
+        brand_filter = Q(brand=data)
+    
+    filter_combination = filter_dict.get(sort, Q())
+    buds = Product.objects.filter(Q(category='B') & brand_filter & filter_combination)
+    
+    return render(request, 'app/bud.html', {'buds': buds, 'data': data})
 
 def login(request):
  return render(request, 'app/login.html')
